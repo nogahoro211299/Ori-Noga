@@ -4,60 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ori's 29th Birthday</title>
-    
     <style>
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fall { from { transform: translateY(-10vh); } to { transform: translateY(110vh); } }
-        @keyframes fadeImg { from { opacity: 0; } to { opacity: 1; } }
-
         .reveal { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
-
-        body {
-            background-color: #0d0d0d;
-            margin: 0;
-            font-family: 'Assistant', sans-serif;
-            direction: rtl;
-            color: white;
-            overflow-x: hidden;
-        }
-
+        body { background-color: #0d0d0d; margin: 0; font-family: 'Assistant', sans-serif; direction: rtl; color: white; overflow-x: hidden; }
         .stars-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
         .star { position: absolute; color: #d4af37; opacity: 0.5; animation: fall var(--speed) linear infinite; }
-
-        #home-screen, #menu-section, #memories-section, #wish-section {
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            text-align: center; width: 100%; z-index: 1; min-height: 100vh;
-        }
-
+        #home-screen, #menu-section, #memories-section, #wish-section { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; z-index: 1; min-height: 100vh; }
         #menu-section, #memories-section, #wish-section { display: none; padding: 40px 0; }
-
         .home-title { color: #d4af37; font-family: 'Playfair Display', serif; letter-spacing: 4px; font-size: 2em; margin-bottom: 50px; text-transform: uppercase; font-weight: 200; }
         .nav-button { background: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 18px; width: 280px; margin-bottom: 25px; font-size: 1em; letter-spacing: 2px; cursor: pointer; transition: 0.4s; }
-
-        .menu-card, .wish-card {
-            width: 85%; max-width: 400px; background-color: #1a1a1a; border: 2px solid #d4af37; 
-            outline: 1px solid #d4af37; outline-offset: -10px; padding: 40px 20px; 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.8); margin: 0 auto;
-        }
-
-        .slideshow-wrapper { display: flex; justify-content: center; align-items: center; width: 100%; flex-grow: 1; }
-        .slideshow-box {
-            position: relative; width: 85vw; max-width: 320px; height: 450px;
-            border: 2px solid #d4af37; padding: 5px; background: #1a1a1a;
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
-        }
-        .slideItem { display: none; width: 100%; height: 100%; object-fit: cover; animation: fadeImg 1.5s; }
-        
+        .menu-card, .wish-card { width: 85%; max-width: 400px; background-color: #1a1a1a; border: 2px solid #d4af37; outline: 1px solid #d4af37; outline-offset: -10px; padding: 40px 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); margin: 0 auto; }
         .wish-text { line-height: 1.8; font-size: 1.05em; color: #fdfcf0; text-align: right; margin-top: 10px; white-space: pre-line; }
+        .slideshow-box { position: relative; width: 85vw; max-width: 320px; height: 450px; border: 2px solid #d4af37; padding: 5px; background: #1a1a1a; }
+        .slideItem { display: none; width: 100%; height: 100%; object-fit: cover; }
     </style>
 </head>
 <body>
-
     <div class="stars-container" id="stars-box"></div>
-    
-    <audio id="bg-music" loop preload="auto">
-        <source src="https://columbia.edu/cu/juby/stuff/Archive/Spring%202019/Study%20Break/I%20See%20the%20Light/I%20See%20the%20Light.mp3" type="audio/mpeg">
-    </audio>
+    <audio id="bg-music" loop><source src="https://columbia.edu/cu/juby/stuff/Archive/Spring%202019/Study%20Break/I%20See%20the%20Light/I%20See%20the%20Light.mp3" type="audio/mpeg"></audio>
 
     <div id="home-screen">
         <h1 class="home-title">ORI'S 29TH BIRTHDAY</h1>
@@ -84,17 +50,8 @@
 
     <div id="memories-section">
         <h2 style="color:#d4af37; letter-spacing: 4px; margin-bottom: 20px;">OUR MOMENTS</h2>
-        <div class="slideshow-wrapper">
-            <div class="slideshow-box">
-                 <img class="slideItem" src="https://i.ibb.co/hx7nd50X/image.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/67sG4pdr/image.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/gbPyMvc0/image.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/2Yfq9Dfk/image.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/QvhP36kS/IMG-4546.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/m5BsVL5J/image.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/XxmYDfp3/IMG-9998.jpg">
-            </div>
-        </div>
+        <div class="slideshow-box" id="slideshow">
+             </div>
         <button onclick="stopMemories()" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:20px;">BACK</button>
     </div>
 
@@ -103,11 +60,7 @@
             <h1 style="color: #d4af37; font-size: 2em; margin-bottom: 20px;">HAPPY BIRTHDAY</h1>
             <div class="wish-text">
                 לדייד שלי, החבר הכי טוב שלי ובעלי לעתיד (המאוד קרוב)❤️
-                אני מאחלת לך את כל הטוב שיש לעולם הזה להציע. שנזכה לגדול, לצמוח ולהתפתח תמיד יחד, שנהיה שם אחד בשביל השנייה בטוב וברע ,שנמשיך לעשות שטויות ולהישאר ילדים לנצח עם סרטים של דיסני, סדרות וצחוק ששמור רק לנו.
-                אני מחכה לרגע שנעמוד יחד מתחת לחופה ומשם נמשיך לדרך משותפת, טובה ומדהימה אפילו יותר. אתה הנפש התאומה שלי, העוגן שלי וההשראה שלי. אני מודה על כל רגע שאתה בחיים שלי ולא יכולתי לבקש מתנה גדולה מזו.
-                אני מאחלת לך שתעבור את תקופת ההתמחות בקלות , שתזכה לפתוח את הקליניקה שתמיד חלמת עליה ושגם ברגעים הכי עמוסים תמצא זמן לחשוב עליי אולי לשחק קצת במייפל...
-                רמת ההשקעה בארוחה הזו היא רק קמצוץ קטן שמתאר את מה שאני מרגישה כלפיך, דברים שקשה להסביר במילים.
-                דייד שלי ,אני אוהבת אותך ברמות שאי אפשר לתאר !
+                אני מאחלת לך את כל הטוב שיש לעולם הזה להציע. שנזכה לגדול, לצמוח ולהתפתח תמיד יחד, שנהיה שם אחד בשביל השנייה בטוב וברע...
                 נגה סיטבון ❤️
             </div>
             <button onclick="showSection('home-screen')" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:25px;">BACK</button>
@@ -116,27 +69,12 @@
 
     <script>
         const music = document.getElementById('bg-music');
-        let slideIdx = 0; let slideTimer;
-
         function showSection(id) {
-            document.getElementById('home-screen').style.display = 'none';
-            document.getElementById('menu-section').style.display = 'none';
-            document.getElementById('memories-section').style.display = 'none';
-            document.getElementById('wish-section').style.display = 'none';
+            document.querySelectorAll('div[id$="-screen"], div[id$="-section"]').forEach(d => d.style.display = 'none');
             document.getElementById(id).style.display = 'flex';
         }
-
-        function startMemories() { showSection('memories-section'); music.play(); slideIdx = 0; runSlides(); }
-        function stopMemories() { music.pause(); music.currentTime = 0; clearTimeout(slideTimer); showSection('home-screen'); }
-
-        function runSlides() {
-            let slides = document.getElementsByClassName("slideItem");
-            for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-            slideIdx++; if (slideIdx > slides.length) slideIdx = 1;
-            slides[slideIdx-1].style.display = "block";
-            slideTimer = setTimeout(runSlides, 4000);
-        }
-
+        function startMemories() { showSection('memories-section'); music.play(); }
+        function stopMemories() { music.pause(); music.currentTime = 0; showSection('home-screen'); }
         const container = document.getElementById('stars-box');
         for (let i = 0; i < 40; i++) {
             const star = document.createElement('div');
