@@ -3,87 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ori's 29th Birthday</title>
+    <title>Ori's 29th Birthday Menu</title>
     <style>
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fall { from { transform: translateY(-10vh); } to { transform: translateY(110vh); } }
         .reveal { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; }
-        body { background-color: #0d0d0d; margin: 0; font-family: 'Assistant', sans-serif; direction: rtl; color: white; overflow-x: hidden; }
-        .stars-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
-        .star { position: absolute; color: #d4af37; opacity: 0.5; animation: fall var(--speed) linear infinite; }
-        #home-screen, #menu-section, #memories-section, #wish-section { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; z-index: 1; min-height: 100vh; }
-        #menu-section, #memories-section, #wish-section { display: none; padding: 40px 0; }
-        .home-title { color: #d4af37; font-family: 'Playfair Display', serif; letter-spacing: 4px; font-size: 2em; margin-bottom: 50px; text-transform: uppercase; font-weight: 200; }
-        .nav-button { background: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 18px; width: 280px; margin-bottom: 25px; font-size: 1em; letter-spacing: 2px; cursor: pointer; transition: 0.4s; }
-        .menu-card, .wish-card { width: 85%; max-width: 400px; background-color: #1a1a1a; border: 2px solid #d4af37; outline: 1px solid #d4af37; outline-offset: -10px; padding: 40px 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); margin: 0 auto; }
-        .wish-text { line-height: 1.8; font-size: 1.05em; color: #fdfcf0; text-align: right; margin-top: 10px; white-space: pre-line; }
-        .slideshow-box { position: relative; width: 85vw; max-width: 320px; height: 450px; border: 2px solid #d4af37; padding: 5px; background: #1a1a1a; }
-        .slideItem { display: none; width: 100%; height: 100%; object-fit: cover; }
+        body { background-color: #0d0d0d; margin: 0; font-family: 'Assistant', sans-serif; direction: rtl; color: white; text-align: center; }
+        .menu-card { width: 90%; max-width: 500px; background-color: #1a1a1a; border: 2px solid #d4af37; padding: 40px 20px; margin: 50px auto; box-shadow: 0 10px 40px rgba(0,0,0,0.8); outline: 1px solid #d4af37; outline-offset: -10px; }
+        .category-title { color: #d4af37; font-size: 1.5em; margin-top: 30px; letter-spacing: 2px; border-bottom: 1px solid #333; display: inline-block; padding-bottom: 5px; }
+        .dish-name { font-size: 1.2em; margin: 15px 0 5px 0; color: #fdfcf0; font-weight: bold; }
+        .dish-desc { font-size: 0.9em; color: #aaa; margin-bottom: 15px; line-height: 1.4; }
+        h1 { color: #d4af37; font-family: 'Playfair Display', serif; font-size: 2.5em; letter-spacing: 5px; margin-bottom: 10px; }
     </style>
 </head>
 <body>
-    <div class="stars-container" id="stars-box"></div>
-    <audio id="bg-music" loop><source src="https://columbia.edu/cu/juby/stuff/Archive/Spring%202019/Study%20Break/I%20See%20the%20Light/I%20See%20the%20Light.mp3" type="audio/mpeg"></audio>
+    <div class="menu-card">
+        <h1>MENU</h1>
+        <p style="letter-spacing: 3px; color: #888;">BIRTHDAY CELEBRATION</p>
 
-    <div id="home-screen">
-        <h1 class="home-title">ORI'S 29TH BIRTHDAY</h1>
-        <button class="nav-button" onclick="showSection('menu-section')">VIEW THE MENU</button>
-        <button class="nav-button" onclick="startMemories()">OUR MOMENTS</button>
-        <button class="nav-button" onclick="showSection('wish-section')">A MESSAGE FROM NOGA</button>
-    </div>
+        <div class="category-title reveal" style="animation-delay: 0.2s;">STARTERS | ראשונות</div>
+        
+        <div class="reveal" style="animation-delay: 0.4s;">
+            <div class="dish-name">Tuna Brioche</div>
+            <div class="dish-desc">לחמניית בריוש עננית, טונה אדומה טרייה, איולי יוזו ועירית</div>
+        </div>
 
-    <div id="menu-section">
-        <div class="menu-card">
-            <h1 style="color: #d4af37; font-size: 2.2em; letter-spacing: 5px; font-weight: 200;">MENU</h1>
-            <div class="reveal" style="color: #d4af37; margin-top: 20px;">STARTERS</div>
-            <div class="reveal">Tuna Brioche</div>
-            <div class="reveal">Salmon Pani Puri</div>
-            <div class="reveal">Diamond Donut</div>
-            <div class="reveal">Blueberry & Tuna Salad</div>
-            <div class="reveal" style="color: #d4af37; margin-top: 20px;">MAIN</div>
-            <div class="reveal">Imperial Ramen</div>
-            <div class="reveal" style="color: #d4af37; margin-top: 20px;">DESSERT</div>
-            <div class="reveal">Lemongrass Crème Brûlée</div>
-            <button onclick="showSection('home-screen')" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:30px;">BACK</button>
+        <div class="reveal" style="animation-delay: 0.6s;">
+            <div class="dish-name">Salmon Pani Puri</div>
+            <div class="dish-desc">כדורי פאני פורי פריכים במילוי טרטר סלמון, קרם פרש וכוסברה</div>
+        </div>
+
+        <div class="reveal" style="animation-delay: 0.8s;">
+            <div class="dish-name">Diamond Donut</div>
+            <div class="dish-desc">דונאט מלוח במילוי מוס דגים עדין וציפוי גלייז אסייתי</div>
+        </div>
+
+        <div class="reveal" style="animation-delay: 1s;">
+            <div class="dish-name">Blueberry & Tuna Salad</div>
+            <div class="dish-desc">סלט מרענן של טונה אדומה, אוכמניות כחולות, רוטב פונזו ושומשום שחור</div>
+        </div>
+
+        <div class="category-title reveal" style="animation-delay: 1.2s;">MAIN | עיקרית</div>
+        
+        <div class="reveal" style="animation-delay: 1.4s;">
+            <div class="dish-name">Imperial Ramen</div>
+            <div class="dish-desc">ציר עמוק ועשיר, אטריות עבודת יד, ביצה רכה, פטריות שיטאקי ובצל ירוק</div>
+        </div>
+
+        <div class="category-title reveal" style="animation-delay: 1.6s;">DESSERT | קינוח</div>
+        
+        <div class="reveal" style="animation-delay: 1.8s;">
+            <div class="dish-name">Lemongrass Crème Brûlée</div>
+            <div class="dish-desc">קרם ברולה בניחוח למון גראס מרענן עם שכבת סוכר שרוף פריכה</div>
+        </div>
+
+        <div class="category-title reveal" style="animation-delay: 2s;">COCKTAIL | קוקטייל</div>
+        
+        <div class="reveal" style="animation-delay: 2.2s;">
+            <div class="dish-name">Asian Fusion Gin</div>
+            <div class="dish-desc">ג'ין, תמצית ליצ'י, ג'ינג'ר ונגיעת בזיליקום תאילנדי</div>
         </div>
     </div>
-
-    <div id="memories-section">
-        <h2 style="color:#d4af37; letter-spacing: 4px; margin-bottom: 20px;">OUR MOMENTS</h2>
-        <div class="slideshow-box" id="slideshow">
-             </div>
-        <button onclick="stopMemories()" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:20px;">BACK</button>
-    </div>
-
-    <div id="wish-section">
-        <div class="wish-card">
-            <h1 style="color: #d4af37; font-size: 2em; margin-bottom: 20px;">HAPPY BIRTHDAY</h1>
-            <div class="wish-text">
-                לדייד שלי, החבר הכי טוב שלי ובעלי לעתיד (המאוד קרוב)❤️
-                אני מאחלת לך את כל הטוב שיש לעולם הזה להציע. שנזכה לגדול, לצמוח ולהתפתח תמיד יחד, שנהיה שם אחד בשביל השנייה בטוב וברע...
-                נגה סיטבון ❤️
-            </div>
-            <button onclick="showSection('home-screen')" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:25px;">BACK</button>
-        </div>
-    </div>
-
-    <script>
-        const music = document.getElementById('bg-music');
-        function showSection(id) {
-            document.querySelectorAll('div[id$="-screen"], div[id$="-section"]').forEach(d => d.style.display = 'none');
-            document.getElementById(id).style.display = 'flex';
-        }
-        function startMemories() { showSection('memories-section'); music.play(); }
-        function stopMemories() { music.pause(); music.currentTime = 0; showSection('home-screen'); }
-        const container = document.getElementById('stars-box');
-        for (let i = 0; i < 40; i++) {
-            const star = document.createElement('div');
-            star.className = 'star'; star.innerHTML = '✦';
-            star.style.left = Math.random() * 100 + '%';
-            star.style.top = Math.random() * 100 + '%';
-            star.style.setProperty('--speed', (Math.random() * 10 + 15) + 's');
-            container.appendChild(star);
-        }
-    </script>
 </body>
 </html>
