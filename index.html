@@ -11,15 +11,15 @@
         body { background-color: #0d0d0d; margin: 0; font-family: 'Assistant', sans-serif; direction: rtl; color: white; overflow-x: hidden; }
         .stars-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
         .star { position: absolute; color: #d4af37; opacity: 0.5; animation: fall var(--speed) linear infinite; }
-        #home-screen, #menu-section, #memories-section, #wish-section { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; z-index: 1; min-height: 100vh; }
-        #menu-section, #memories-section, #wish-section { display: none; padding: 40px 0; }
-        .home-title { color: #d4af37; font-family: 'Playfair Display', serif; letter-spacing: 4px; font-size: 2em; margin-bottom: 50px; text-transform: uppercase; font-weight: 200; }
-        .nav-button { background: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 18px; width: 280px; margin-bottom: 25px; font-size: 1em; letter-spacing: 2px; cursor: pointer; transition: 0.4s; }
+        #home-screen, #menu-section, #wish-section { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; width: 100%; z-index: 1; min-height: 100vh; }
+        #menu-section, #wish-section { display: none; padding: 40px 0; }
+        .home-title { color: #d4af37; font-family: 'Playfair Display', serif; letter-spacing: 4px; font-size: 2.2em; margin-bottom: 50px; text-transform: uppercase; }
+        .nav-button { background: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 18px; width: 280px; margin-bottom: 25px; font-size: 1.1em; letter-spacing: 2px; cursor: pointer; transition: 0.4s; }
         .menu-card, .wish-card { width: 90%; max-width: 450px; background-color: #1a1a1a; border: 2px solid #d4af37; outline: 1px solid #d4af37; outline-offset: -10px; padding: 40px 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.8); margin: 0 auto; }
-        .category-title { color: #d4af37; font-size: 1.3em; margin-top: 25px; border-bottom: 1px solid #333; display: inline-block; }
-        .dish-name { font-size: 1.1em; margin: 10px 0 2px 0; color: #fdfcf0; font-weight: bold; }
-        .dish-desc { font-size: 0.85em; color: #aaa; margin-bottom: 10px; }
-        .wish-text { line-height: 1.8; font-size: 1.05em; color: #fdfcf0; text-align: right; white-space: pre-line; }
+        .category-title { color: #d4af37; font-size: 1.4em; margin-top: 25px; border-bottom: 1px solid #333; display: inline-block; padding-bottom: 5px; }
+        .dish-name { font-size: 1.2em; margin: 15px 0 5px 0; color: #fdfcf0; font-weight: bold; }
+        .dish-desc { font-size: 0.9em; color: #aaa; margin-bottom: 15px; line-height: 1.4; }
+        .wish-text { line-height: 1.8; font-size: 1.1em; color: #fdfcf0; text-align: right; white-space: pre-line; }
     </style>
 </head>
 <body>
@@ -34,14 +34,15 @@
 
     <div id="menu-section">
         <div class="menu-card">
-            <h1 style="color: #d4af37; font-size: 2.2em; letter-spacing: 5px;">MENU</h1>
+            <h1 style="color: #d4af37; font-size: 2.5em; letter-spacing: 5px;">MENU</h1>
             <div class="category-title reveal">STARTERS | ראשונות</div>
-            <div class="reveal"><div class="dish-name">Tuna Brioche</div><div class="dish-desc">לחמניית בריוש, טונה אדומה, איולי יוזו</div></div>
-            <div class="reveal"><div class="dish-name">Salmon Pani Puri</div><div class="dish-desc">טרטר סלמון בתוך פאני פורי פריך</div></div>
+            <div class="reveal"><div class="dish-name">Tuna Brioche</div><div class="dish-desc">לחמניית בריוש עננית, טונה אדומה טרייה, איולי יוזו ועירית</div></div>
+            <div class="reveal"><div class="dish-name">Salmon Pani Puri</div><div class="dish-desc">כדורי פאני פורי פריכים במילוי טרטר סלמון, קרם פרש וכוסברה</div></div>
+            <div class="reveal"><div class="dish-name">Diamond Donut</div><div class="dish-desc">דונאט מלוח במילוי מוס דגים עדין וציפוי גלייז אסייתי</div></div>
             <div class="category-title reveal">MAIN | עיקרית</div>
-            <div class="reveal"><div class="dish-name">Imperial Ramen</div><div class="dish-desc">ציר עמוק, אטריות בעבודת יד וביצה רכה</div></div>
+            <div class="reveal"><div class="dish-name">Imperial Ramen</div><div class="dish-desc">ציר עמוק ועשיר, אטריות עבודת יד, ביצה רכה, פטריות שיטאקי ובצל ירוק</div></div>
             <div class="category-title reveal">DESSERT | קינוח</div>
-            <div class="reveal"><div class="dish-name">Lemongrass Crème Brûlée</div><div class="dish-desc">קרם ברולה בניחוח למון גראס</div></div>
+            <div class="reveal"><div class="dish-name">Lemongrass Crème Brûlée</div><div class="dish-desc">קרם ברולה בניחוח למון גראס מרענן עם שכבת סוכר שרוף פריכה</div></div>
             <button onclick="showSection('home-screen')" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:30px;">BACK</button>
         </div>
     </div>
@@ -51,7 +52,7 @@
             <h1 style="color: #d4af37; font-size: 2em; margin-bottom: 20px;">HAPPY BIRTHDAY</h1>
             <div class="wish-text">
                 לדייד שלי, החבר הכי טוב שלי ובעלי לעתיד❤️
-                אני מאחלת לך את כל הטוב שיש לעולם הזה להציע...
+                אני מאחלת לך את כל הטוב שיש לעולם הזה להציע. שנזכה לגדול, לצמוח ולהתפתח תמיד יחד, שנהיה שם אחד בשביל השנייה בטוב וברע ,שנמשיך לעשות שטויות ולהישאר ילדים לנצח עם סרטים של דיסני, סדרות וצחוק ששמור רק לנו. 
                 אוהבת אותך ברמות שאי אפשר לתאר!
                 נגה סיטבון ❤️
             </div>
@@ -61,9 +62,11 @@
 
     <script>
         function showSection(id) {
-            document.querySelectorAll('div[id$="-screen"], div[id$="-section"]').forEach(d => d.style.display = 'none');
+            document.getElementById('home-screen').style.display = 'none';
+            document.getElementById('menu-section').style.display = 'none';
+            document.getElementById('wish-section').style.display = 'none';
             document.getElementById(id).style.display = 'flex';
-            if(id !== 'home-screen') document.getElementById('bg-music').play();
+            document.getElementById('bg-music').play();
         }
         const container = document.getElementById('stars-box');
         for (let i = 0; i < 40; i++) {
