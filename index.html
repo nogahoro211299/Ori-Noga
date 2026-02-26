@@ -48,7 +48,7 @@
         }
         .slideItem { display: none; width: 100%; height: 100%; object-fit: cover; animation: fadeImg 1.5s; }
         
-        .wish-text { line-height: 1.8; font-size: 1.05em; color: #fdfcf0; text-align: right; margin-top: 10px; }
+        .wish-text { line-height: 1.8; font-size: 1.05em; color: #fdfcf0; text-align: right; margin-top: 10px; white-space: pre-line; }
     </style>
 </head>
 <body>
@@ -68,100 +68,49 @@
 
     <div id="menu-section">
         <div class="menu-card">
-            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 10px;">
-                <div style="height: 1px; background: #d4af37; flex: 1; opacity: 0.5;"></div>
-                <h1 style="font-family: 'Playfair Display', serif; color: #d4af37; font-size: 2.2em; margin: 0 15px; letter-spacing: 5px; font-weight: 200;">MENU</h1>
-                <div style="height: 1px; background: #d4af37; flex: 1; opacity: 0.5;"></div>
-            </div>
-            <div style="color: #888; font-size: 0.8em; letter-spacing: 3px; margin-bottom: 30px;">PRIVATE DINNER</div>
-
-            <div class="reveal" style="color: #d4af37; font-size: 1.1em; letter-spacing: 6px; margin-bottom: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); display: inline-block; padding-bottom: 5px; width: 60%;">STARTERS</div>
-            <div class="reveal" style="margin-bottom: 20px;">
-                <div style="color: #fdfcf0; font-size: 1.4em;">Tuna Brioche</div>
-                <div style="color: #aaa; font-size: 0.9em;">ספייסי טונה בתיבול פונזו ושבבי בצל מוזהבים</div>
-            </div>
-            <div class="reveal" style="margin-bottom: 20px;">
-                <div style="color: #fdfcf0; font-size: 1.4em;">Salmon Pani Puri</div>
-                <div style="color: #aaa; font-size: 0.9em;">כדורי פאני פורי פריכים במילוי טרטר סלמון ואיולי ליים</div>
-            </div>
-            <div class="reveal" style="margin-bottom: 20px;">
-                <div style="color: #fdfcf0; font-size: 1.4em;">Diamond Donut</div>
-                <div style="color: #aaa; font-size: 0.9em;">טונה אדומה, מיונז כמהין ואורז</div>
-            </div>
-            <div class="reveal" style="margin-bottom: 30px;">
-                <div style="color: #fdfcf0; font-size: 1.4em;">Blueberry & Tuna Salad</div>
-                <div style="color: #aaa; font-size: 0.9em;">טונה אדומה, אוכמניות טריות, רוקט ונענע על קרם יוגורט עזים</div>
-            </div>
-
-            <div class="reveal" style="color: #d4af37; font-size: 1.1em; letter-spacing: 6px; margin-bottom: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); display: inline-block; padding-bottom: 5px; width: 60%;">MAIN COURSE</div>
-            <div class="reveal" style="margin-bottom: 30px;">
-                <div style="color: #fdfcf0; font-size: 1.5em;">Imperial Ramen</div>
-                <div style="color: #aaa; font-size: 0.95em;">ציר מיסו וג'ינג'ר עמוק, פרגית צרובה, ביצה רכה ואצות</div>
-            </div>
-
-            <div class="reveal" style="color: #d4af37; font-size: 1.1em; letter-spacing: 6px; margin-bottom: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); display: inline-block; padding-bottom: 5px; width: 60%;">DESSERT</div>
-            <div class="reveal" style="margin-bottom: 30px;">
-                <div style="color: #fdfcf0; font-size: 1.5em;">Lemongrass Crème Brûlée</div>
-                <div style="color: #aaa; font-size: 0.95em;">קרם ברולה קלאסי בניחוח למון גראס</div>
-            </div>
-
-            <div class="reveal" style="color: #d4af37; font-size: 1.1em; letter-spacing: 6px; margin-bottom: 20px; border-bottom: 1px solid rgba(212, 175, 55, 0.3); display: inline-block; padding-bottom: 5px; width: 60%;">COCKTAIL</div>
-            <div class="reveal" style="margin-bottom: 20px;">
-                <div style="color: #fdfcf0; font-size: 1.5em;">Spicy Margarita</div>
-                <div style="color: #aaa; font-size: 0.9em;">טקילה, ליים וצ'ילי חריף</div>
-            </div>
-
-            <button onclick="showSection('home-screen')" style="background:transparent; border:none; color:#555; cursor:pointer;">BACK</button>
+            <h1 style="color: #d4af37; font-size: 2.2em; letter-spacing: 5px; font-weight: 200;">MENU</h1>
+            <div class="reveal" style="color: #d4af37; margin-top: 20px;">STARTERS</div>
+            <div class="reveal">Tuna Brioche</div>
+            <div class="reveal">Salmon Pani Puri</div>
+            <div class="reveal">Diamond Donut</div>
+            <div class="reveal">Blueberry & Tuna Salad</div>
+            <div class="reveal" style="color: #d4af37; margin-top: 20px;">MAIN</div>
+            <div class="reveal">Imperial Ramen</div>
+            <div class="reveal" style="color: #d4af37; margin-top: 20px;">DESSERT</div>
+            <div class="reveal">Lemongrass Crème Brûlée</div>
+            <button onclick="showSection('home-screen')" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:30px;">BACK</button>
         </div>
     </div>
 
     <div id="memories-section">
-        <h2 style="color:#d4af37; font-family: 'Playfair Display', serif; letter-spacing: 4px; margin-bottom: 20px;">OUR MOMENTS</h2>
+        <h2 style="color:#d4af37; letter-spacing: 4px; margin-bottom: 20px;">OUR MOMENTS</h2>
         <div class="slideshow-wrapper">
             <div class="slideshow-box">
-                 <img class="slideItem" src="https://i.ibb.co/mF2zLQbW/IMG-3934.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/Z6PPBd0h/EA2-CB2-BD-D1-F3-4816-B0-E8-237-C96-F09-A9-D.png">
-                 <img class="slideItem" src="https://i.ibb.co/Lh8CTq7W/IMG-3704.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/Ld07qZ70/IMG-3635.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/zHHwkQkf/IMG-9998.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/JjdLwfjn/IMG-5550.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/bR810S8K/DD4-B5436-FB48-448-D-B1-FE-D604-C85-A7-E3-C.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/LDJSzQsT/494-B128-C-73-F9-4072-BB01-53-B9-EA5-AFEC9.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/NdYfLk4t/1ec234fc-3991-4255-a0f7-21fdc0a44070.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/Gfx1Mwms/IMG20220930202333-Original.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/pvfWMVRY/70646314-77ba-40ff-b948-7d868a100f8e.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/qFrjJW7V/IMG-1426.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/yFfStYs2/IMG-1425.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/7xHtCznW/28697-DE7-3-CAE-4-DC8-A39-A-3-BE6-C6-C9-A017.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/VcZzj6d9/A84660-C6-2-A97-4-D5-D-BF59-C1582-B6-BB8-E3.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/cKkbP5kz/IMG-4639.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/d085Gbcr/IMG-7687.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/9HMG2FCq/IMG-7738.jpg">
-                 <img class="slideItem" src="https://i.ibb.co/bjTkS99K/IMG-7958.jpg">
+                 <img class="slideItem" src="https://i.ibb.co/hx7nd50X/image.jpg">
+                 <img class="slideItem" src="https://i.ibb.co/67sG4pdr/image.jpg">
+                 <img class="slideItem" src="https://i.ibb.co/gbPyMvc0/image.jpg">
+                 <img class="slideItem" src="https://i.ibb.co/2Yfq9Dfk/image.jpg">
+                 <img class="slideItem" src="https://i.ibb.co/QvhP36kS/IMG-4546.jpg">
+                 <img class="slideItem" src="https://i.ibb.co/m5BsVL5J/image.jpg">
+                 <img class="slideItem" src="https://i.ibb.co/XxmYDfp3/IMG-9998.jpg">
             </div>
         </div>
-        <button onclick="stopMemories()" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:20px;">BACK TO HOME</button>
+        <button onclick="stopMemories()" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:20px;">BACK</button>
     </div>
 
     <div id="wish-section">
         <div class="wish-card">
-            <h1 style="font-family: 'Playfair Display', serif; color: #d4af37; font-size: 2em; margin-bottom: 20px;">HAPPY BIRTHDAY</h1>
+            <h1 style="color: #d4af37; font-size: 2em; margin-bottom: 20px;">HAPPY BIRTHDAY</h1>
             <div class="wish-text">
-<strong>לדייד שלי, החבר הכי טוב שלי ובעלי לעתיד (המאוד קרוב)❤️</strong>
-
-אני מאחלת לך את כל הטוב שיש לעולם הזה להציע. שנזכה לגדול, לצמוח ולהתפתח תמיד יחד, שנהיה שם אחד בשביל השנייה בטוב וברע, שנמשיך לעשות שטויות ולהישאר ילדים לנצח עם סרטים של דיסני, סדרות וצחוק ששמור רק לנו. 
-
-אני מחכה לרגע שנעמוד יחד מתחת לחופה ומשם נמשיך לדרך משותפת, טובה ומדהימה אפילו יותר. אתה הנפש התאומה שלי, העוגן שלי וההשראה שלי. אני מודה על כל רגע שאתה בחיים שלי ולא יכולתי לבקש מתנה גדולה מזו.
-
-אני מאחלת לך שתעבור את תקופת ההתמחות בקלות, שתזכה לפתוח את הקליניקה שתמיד חלמת עליה ושגם ברגעים הכי עמוסים תמצא זמן לחשוב עליי אולי לשחק קצת במייפל...
-
-רמת ההשקעה בארוחה הזו היא רק קמצוץ קטן שמתאר את מה שאני מרגישה כלפיך, דברים שקשה להסביר במילים.
-
-<strong>דייד שלי, אני אוהבת אותך ברמות שאי אפשר לתאר!</strong>
-
-נגה סיטבון ❤️
+                לדייד שלי, החבר הכי טוב שלי ובעלי לעתיד (המאוד קרוב)❤️
+                אני מאחלת לך את כל הטוב שיש לעולם הזה להציע. שנזכה לגדול, לצמוח ולהתפתח תמיד יחד, שנהיה שם אחד בשביל השנייה בטוב וברע ,שנמשיך לעשות שטויות ולהישאר ילדים לנצח עם סרטים של דיסני, סדרות וצחוק ששמור רק לנו.
+                אני מחכה לרגע שנעמוד יחד מתחת לחופה ומשם נמשיך לדרך משותפת, טובה ומדהימה אפילו יותר. אתה הנפש התאומה שלי, העוגן שלי וההשראה שלי. אני מודה על כל רגע שאתה בחיים שלי ולא יכולתי לבקש מתנה גדולה מזו.
+                אני מאחלת לך שתעבור את תקופת ההתמחות בקלות , שתזכה לפתוח את הקליניקה שתמיד חלמת עליה ושגם ברגעים הכי עמוסים תמצא זמן לחשוב עליי אולי לשחק קצת במייפל...
+                רמת ההשקעה בארוחה הזו היא רק קמצוץ קטן שמתאר את מה שאני מרגישה כלפיך, דברים שקשה להסביר במילים.
+                דייד שלי ,אני אוהבת אותך ברמות שאי אפשר לתאר !
+                נגה סיטבון ❤️
             </div>
-            <button onclick="showSection('home-screen')" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:25px;">BACK TO HOME</button>
+            <button onclick="showSection('home-screen')" style="background:transparent; border:none; color:#555; cursor:pointer; margin-top:25px;">BACK</button>
         </div>
     </div>
 
@@ -175,7 +124,6 @@
             document.getElementById('memories-section').style.display = 'none';
             document.getElementById('wish-section').style.display = 'none';
             document.getElementById(id).style.display = 'flex';
-            window.scrollTo(0,0);
         }
 
         function startMemories() { showSection('memories-section'); music.play(); slideIdx = 0; runSlides(); }
